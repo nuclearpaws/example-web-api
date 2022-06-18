@@ -13,4 +13,12 @@ public class ExampleController
         var response = "Hello World!";
         return Ok(response);
     }
+
+    [HttpGet]
+    public ActionResult<string> GetGreeting(
+        [FromQuery] string name)
+    {
+        var response = $"Greetings {name}!";
+        return Ok(response);
+    }
 }
