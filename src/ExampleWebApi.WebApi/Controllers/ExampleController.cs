@@ -21,4 +21,12 @@ public class ExampleController
         var response = $"Greetings {name}!";
         return Ok(response);
     }
+
+    [HttpGet]
+    public ActionResult<string> GetFarewell(
+        [FromQuery] string name)
+    {
+        var response = $"Farewell {name}!";
+        return Ok(response);
+    }
 }
