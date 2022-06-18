@@ -8,6 +8,7 @@ public class ExampleController
     : ControllerBase
 {
     [HttpGet]
+    [Route("")]
     public ActionResult<string> Get()
     {
         var response = "Hello World!";
@@ -15,6 +16,7 @@ public class ExampleController
     }
 
     [HttpGet]
+    [Route("greeting")]
     public ActionResult<string> GetGreeting(
         [FromQuery] string name)
     {
@@ -23,6 +25,7 @@ public class ExampleController
     }
 
     [HttpGet]
+    [Route("farewell")]
     public ActionResult<string> GetFarewell(
         [FromQuery] string name)
     {
